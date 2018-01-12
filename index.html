@@ -8,8 +8,7 @@
     <link rel="stylesheet" href="assets/style.css">
   </head>
 
-  <body>
-
+  <body onload="loadMovieDatabase()">
     <header>
       <div class="container">       
         <h1><img src="assets/logo.png" width="30em" /> Video Archive</h1>
@@ -47,7 +46,7 @@
     return xhttp.responseXML;
     }
     
-    function displayResult()
+    function loadMovieDatabase()
     {
     xml = loadXMLDoc("media.xml");
     xsl = loadXMLDoc("media.xsl");
