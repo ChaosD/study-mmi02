@@ -16,8 +16,23 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
     <tbody>
         <xsl:for-each select="archive/video">
             <tr>
-                <td style="text-align: left"><xsl:value-of select="title" /></td>
-                <td style="text-align: left"><xsl:value-of select="description" /></td>
+                <td style="text-align: left">
+                    <a href="{@link}"><xsl:value-of select="@link"/>
+                        <img class="thumbnail">
+                            <xsl:attribute name="src">
+                                <xsl:value-of select="thumbnail" />
+                            </xsl:attribute>
+                        </img>
+                    </a>                    
+                </td>
+                <td style="text-align: left">
+                    <a href="{@link}"><xsl:value-of select="@link"/>
+                        <xsl:value-of select="title" />
+                    </a>
+                    <p>
+                        <xsl:value-of select="description" />
+                    </p>
+                </td>
                 <td style="text-align: left"><xsl:value-of select="rating" /></td>
             </tr>
         </xsl:for-each>
