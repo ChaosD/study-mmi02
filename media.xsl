@@ -7,10 +7,9 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
   <table >    
     <tbody>
         <xsl:for-each select="archive/video">
-            <xsl:variable name="video-link" select="'link'"/>
             <tr>
                 <td>
-                    <a href="{@video-link}">
+                    <a  href="{link}">
                         <img class="thumbnail">
                             <xsl:attribute name="src">
                                 <xsl:value-of select="thumbnail" />
@@ -19,7 +18,7 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
                     </a>                    
                 </td>
                 <td >
-                    <a href="{@video-link}">
+                    <a  href="{link}">
                         <xsl:value-of select="title" />
                     </a>
                     <p>
