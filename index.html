@@ -5,28 +5,66 @@
     <meta charset='utf-8'>
     <meta http-equiv="X-UA-Compatible" content="chrome=1">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="/study-mmi02/assets/css/style.css">
+    <link rel="stylesheet" href="assets/style.css">
   </head>
 
   <body>
 
     <header>
-      <div class="container">
-        <h1>Video Archive</h1>
-        <h2>test...</h2>
+      <div class="container">       
+        <h1><img src="assets/logo.png" width="30em" /> Video Archive</h1>
       </div>
     </header>
 
     <div class="container">
       <section id="main_content">
-        <h2 id="welcome-to-github-pages">Welcome to GitHub Pages</h2>
+        <h2 id="welcome-to-github-pages">Welcome to the video archive of yesterday!</h2>
 
-<p>You can use the <a href="https://github.com/ChaosD/study-mmi02/edit/master/index.md">editor on GitHub</a> to maintain and preview the content for your website in Markdown files.</p>
-
-
+        <p>You can browse all available videos in the table below</p>
+        
+        <div id="video_table">
+          <blockquote>Loading ... </blockquote>
+        </div>
       </section>
-    </div>
-
-    
+    </div>    
   </body>
+
+  <script>
+    // Adapted from: https://www.w3schools.com/xml/xsl_client.asp
+    function loadXMLDoc(filename)
+    {
+    if (window.ActiveXObject)
+      {
+      xhttp = new ActiveXObject("Msxml2.XMLHTTP");
+      }
+    else 
+      {
+      xhttp = new XMLHttpRequest();
+      }
+    xhttp.open("GET", filename, false);
+    try {xhttp.responseType = "msxml-document"} catch(err) {} // Helping IE11
+    xhttp.send("");
+    return xhttp.responseXML;
+    }
+    
+    function displayResult()
+    {
+    xml = loadXMLDoc("media.xml");
+    xsl = loadXMLDoc("media.xsl");
+    // code for IE
+    if (window.ActiveXObject || xhttp.responseType == "msxml-document")
+      {
+      ex = xml.transformNode(xsl);
+      document.getElementById("video_table").innerHTML = ex;
+      }
+    // code for Chrome, Firefox, Opera, etc.
+    else if (document.implementation && document.implementation.createDocument)
+      {
+      xsltProcessor = new XSLTProcessor();
+      xsltProcessor.importStylesheet(xsl);
+      resultDocument = xsltProcessor.transformToFragment(xml, document);
+      document.getElementById("video_table").appendChild(resultDocument);
+      }
+    }
+    </script>
 </html>
