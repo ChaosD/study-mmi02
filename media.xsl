@@ -9,9 +9,13 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
         <xsl:for-each select="archive/video">
             <tr>
                 <td>
-                    <a href="{link}" target="_blank">
-                        <img class="thumbnail" src="{thumbnail}"></img>
-                    </a>                    
+                    <div class="thumbnail">
+                        <a href="{link}" target="_blank">
+                            <span class="play">&#9658;</span>
+                            <div class="overlay"></div>
+                        </a>                    
+                        <img src="{thumbnail}"></img>
+                    </div>
                 </td>
                 <td >
                     <a href="{link}" target="_blank">
