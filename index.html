@@ -22,7 +22,7 @@
         <p>You can browse all available videos in the table below</p>
         
         <div id="video_table">
-          <blockquote>Loading ... </blockquote>
+          <blockquote id="loading-indicator">Loading ... </blockquote>
         </div>
       </section>
     </div>    
@@ -62,6 +62,7 @@
       xsltProcessor = new XSLTProcessor();
       xsltProcessor.importStylesheet(xsl);
       resultDocument = xsltProcessor.transformToFragment(xml, document);
+      document.getElementById("loading-indicator").remove();
       document.getElementById("video_table").appendChild(resultDocument);
       }
     }
