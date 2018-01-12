@@ -9,12 +9,12 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
         <xsl:for-each select="archive/video">
             <tr>
                 <td>
-                    <a href="{link}">
+                    <a href="{link}" target="_blank">
                         <img class="thumbnail" src="{thumbnail}"></img>
                     </a>                    
                 </td>
                 <td >
-                    <a href="{link}">
+                    <a href="{link}" target="_blank">
                         <xsl:value-of select="title" />
                     </a>
                     <p>
