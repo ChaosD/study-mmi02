@@ -17,16 +17,16 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
                         <img src="{thumbnail}"></img>
                     </div>
                 </td>
-                <td >
+                <td style="vertical-align: top;">                
                     <a href="{link}" target="_blank">
                         <xsl:value-of select="title" />
                     </a>
+                    <span class="rating">
+                        <xsl:value-of select="rating" />
+                    </span>
                     <p>
                         <xsl:value-of select="description" />
                     </p>
-                </td>
-                <td>
-                    <xsl:value-of select="rating" />
                 </td>
             </tr>
         </xsl:for-each>

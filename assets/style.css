@@ -85,8 +85,9 @@ th {
 }
 
 td {
-    padding: 5px 10px
+    padding: 5px 10px;
 }
+
 
 hr {
     height: 0;
@@ -145,4 +146,13 @@ a {
     height: 168px;
     background-color: #000000;
     opacity: .7;
+}
+
+.rating {
+    background: rgba(0,0,0,0.9);
+    border: 1px dashed rgb(255, 187, 0);
+    padding: 0px 10px;
+    color: #e48100;
+    border-radius: 2px;
+    float:right
 }
