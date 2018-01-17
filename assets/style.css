@@ -171,6 +171,12 @@ a {
 
 /* Popup overlay styles*/
 
+video {
+    width: 100%;
+    height: auto;
+    max-height: 90%;
+}
+
 .overlay {
     position: fixed;
     visibility: hidden;
@@ -189,12 +195,11 @@ a {
 }
 
 .popup {
-    margin: 70px auto;
     padding: 20px;
-    background: rgb(46, 46, 46);
-    width: 90%;
+    background: rgba(46, 46, 46, 0.93);
+    top: 85px;
+    height: 100%;
     position: relative;
-    transition: all 1s ease-in-out;
 }
 
 .popup .close {
