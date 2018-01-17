@@ -2,6 +2,7 @@
 Main theme adapted from:
 https://github.com/pages-themes/hacker/blob/master/_sass/jekyll-theme-hacker.scss 
 */
+
 body {
     margin: 0;
     padding: 0;
@@ -96,7 +97,6 @@ td {
     padding: 5px 10px;
 }
 
-
 hr {
     height: 0;
     border: 0;
@@ -111,6 +111,7 @@ a {
 
 
 /* Play button overlay adapted from: https://codepen.io/rhinonabox/pen/jaqxs */
+
 .thumbnail {
     position: relative;
     width: 300px;
@@ -159,10 +160,49 @@ a {
 }
 
 .rating {
-    background: rgba(0,0,0,0.9);
+    background: rgba(0, 0, 0, 0.9);
     border: 1px dashed rgb(255, 187, 0);
     padding: 0px 10px;
     color: #e48100;
     border-radius: 2px;
-    float:right    
+    float: right
+}
+
+
+/* Popup overlay styles*/
+
+.overlay {
+    position: fixed;
+    visibility: hidden;
+    opacity: 0;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(10, 32, 0, 0.473);
+    transition: opacity 500ms;
+}
+
+.overlay:target {
+    visibility: visible;
+    opacity: 1;
+}
+
+.popup {
+    margin: 70px auto;
+    padding: 20px;
+    background: rgb(46, 46, 46);
+    width: 90%;
+    position: relative;
+    transition: all 1s ease-in-out;
+}
+
+.popup .close {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    transition: all 200ms;
+    font-weight: bold;
+    text-decoration: none;
+    color: #b5e853;
 }
