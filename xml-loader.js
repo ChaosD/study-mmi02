@@ -21,7 +21,7 @@ function loadMovieDatabase()
     // code for IE
     if (window.ActiveXObject || xhttp.responseType == "msxml-document"){
         ex = xml.transformNode(xsl);
-        document.getElementById("video_table").innerHTML = ex;
+        document.getElementById("video-table").innerHTML = ex;
     }
     // code for Chrome, Firefox, Opera, etc.
     else if (document.implementation && document.implementation.createDocument){
@@ -29,6 +29,6 @@ function loadMovieDatabase()
         xsltProcessor.importStylesheet(xsl);
         resultDocument = xsltProcessor.transformToFragment(xml, document);
         document.getElementById("loading-indicator").remove();
-        document.getElementById("video_table").appendChild(resultDocument);
+        document.getElementById("video-table").appendChild(resultDocument);
     }
 }
