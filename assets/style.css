@@ -196,7 +196,7 @@ video {
 .popup {
     text-align: center;
     margin: 100px auto;
-    background: #fff;
+    background: rgb(48, 48, 48);
     width: 100%;
     height: 60%;
     position: relative;
