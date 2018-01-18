@@ -10,7 +10,7 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
             <tr>
                 <td>
                     <div class="thumbnail">
-                        <a href="{link}" target="_blank">
+                        <a onclick="player.open('{link}')" href="#">
                             <span class="play">&#9658;</span>
                             <div class="overlay"></div>
                         </a>                    
@@ -18,7 +18,7 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
                     </div>
                 </td>
                 <td style="vertical-align: top;">                
-                    <a href="{link}" target="_blank">
+                    <a onclick="player.open('{link}')" href="#">
                         <xsl:value-of select="title" />
                     </a>
                     <span class="rating">

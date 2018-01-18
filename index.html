@@ -8,9 +8,10 @@
     <link rel="stylesheet" href="assets/style.css">
     <link rel="icon" href="assets/favicon.ico" type="image/x-icon">
     <script type="text/javascript" src="xml-loader.js"></script>
+    <script type="text/javascript" src="video-player.js"></script>
   </head>
 
-  <body onload="loadMovieDatabase()">
+  <body onLoad="loader.loadMovieDatabase()">
     <header>
       <div class="container">       
         <h1><img src="assets/logo.png" width="30em" /> Video Archive</h1>
@@ -22,22 +23,28 @@
         <h2 id="welcome-to-github-pages">Welcome to the video archive of yesterday!</h2>
 
         <p>You can browse all available videos in the table below</p>
-      <hr>
+        <hr>
         <div id="video-table">
           <blockquote id="loading-indicator">Loading ... </blockquote>
         </div>
       </section>
     </div>
 
-    <a class="button" href="#video-player">Show player</a>
-    <div id="video-player" class="overlay">
+    <div id="player-overlay" class="video-overlay">
       <div class="popup">
-        <a class="close" href="#">&times;</a>
-        <video controls>
-          <source src="media/big_buck_bunny.mp4" type="video/mp4">
+        <a class="close" onclick="player.close()" href="#">&times;</a>
+        <video id="player" controls>
+          <source id="player-src" src="" type="video/mp4">
           Your browser does not support the video tag.
         </video>
       </div>
     </div>    
   </body>
+  <script>
+      var overlay = document.getElementById("player-overlay");
+      var player = new VideoPlayer(overlay)
+      
+      var tableContainer = document.getElementById("video-table");
+      var loader = new XmlLoader(tableContainer);      
+  </script>
 </html>
