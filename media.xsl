@@ -7,6 +7,7 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
   <table >    
     <tbody>
         <xsl:for-each select="archive/video">
+        <xsl:variable name="videoIndex" select="position() - 1"/>
             <tr>
                 <td>
                     <div class="thumbnail">
@@ -17,7 +18,7 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
                         <img src="{thumbnail}"></img>
                     </div>
                 </td>
-                <td style="vertical-align: top;">                
+                <td style="vertical-align: top;">
                     <a onclick="player.open('{link}')" href="#">
                         <xsl:value-of select="title" />
                     </a>
@@ -27,6 +28,9 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
                     <p>
                         <xsl:value-of select="description" />
                     </p>
+                    <a onclick="loader.deleteVideo({$videoIndex})" href="#">
+                        X
+                    </a>
                 </td>
             </tr>
         </xsl:for-each>
