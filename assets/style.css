@@ -106,7 +106,16 @@ hr {
 
 a {
     color: #63c0f5;
-    text-shadow: 0 0 5px rgba(104, 182, 255, 0.5)
+    text-shadow: 0 0 5px rgba(104, 182, 255, 0.5);
+}
+
+a.button-delete {
+    padding-left: 10px;
+    color: red;
+    text-decoration: none;
+}
+a.button-delete:hover {
+    text-decoration: underline;
 }
 
 

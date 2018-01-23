@@ -22,15 +22,13 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
                     <a onclick="player.open('{link}')" href="#">
                         <xsl:value-of select="title" />
                     </a>
+                    <a class="button-delete" onclick="database.deleteVideo({$videoIndex})" href="#">X</a>
                     <span class="rating">
                         <xsl:value-of select="rating" />/5
                     </span>
                     <p>
                         <xsl:value-of select="description" />
-                    </p>
-                    <a onclick="database.deleteVideo({$videoIndex})" href="#">
-                        X
-                    </a>
+                    </p>                    
                 </td>
             </tr>
         </xsl:for-each>
