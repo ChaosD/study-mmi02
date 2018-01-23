@@ -73,7 +73,7 @@ h2 {
     font-family: Monaco, "Bitstream Vera Sans Mono", "Lucida Console", Terminal, monospace;
     color: #b5e853;
     letter-spacing: -0.03em;
-    text-shadow: 0 1px 1px rgba(0, 0, 0, 0.1), 0 0 5px rgba(181, 232, 83, 0.1), 0 0 10px rgba(181, 232, 83, 0.1)
+    text-shadow: 0 1px 1px rgba(0, 0, 0, 0.1), 0 0 5px rgba(181, 232, 83, 0.1), 0 0 10px rgba(181, 232, 83, 0.1);
 }
 
 blockquote {
@@ -168,13 +168,13 @@ a {
     float: right
 }
 
-
-/* Popup overlay styles*/
-
 video {
     height: 100%;
     display: inline-block;
 }
+
+
+/* Popup overlay styles*/
 
 .popup-overlay {
     position: fixed;
@@ -204,6 +204,7 @@ video {
 }
 
 .popup .close {
+    z-index: 99;
     position: absolute;
     top: 20px;
     right: 20px;
@@ -211,4 +212,21 @@ video {
     font-weight: bold;
     text-decoration: none;
     color: #b5e853;
+}
+
+/* Form */
+.form-content {
+    text-align: left;
+    display: inline-block;
+    width: 500px;
+}
+
+.form-group > input,textarea {
+    width: 250px;
+}
+
+.form-group > label {
+    display: inline-block;
+    width: 150px;
+    vertical-align: middle;
 }

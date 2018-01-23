@@ -3,6 +3,16 @@ class VideoForm {
         this.overlay = formOverlay;        
         this.form = formOverlay.querySelector("#add-video");
         this.database = database;
+
+        
+        var that = this; // keep the class instance for the closure
+        // Intercept form submission and parse it as JSON
+        this.form.addEventListener( "submit", function( e ) {
+			e.preventDefault();
+			var json = that.getFormData( this );
+            that.database.addVideo(json);
+            that.close();
+		}, false);
     }
 
     getFormData( form ) {
@@ -22,10 +32,12 @@ class VideoForm {
     }
 
     open(){ 
+    	this.form.reset();
         this.overlay.classList.add('visible');
     }
 
     close(){
+    	this.form.reset();
         this.overlay.classList.remove('visible')
     }
 }

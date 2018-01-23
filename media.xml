@@ -3,14 +3,14 @@
     <video>
         <title>Big Buck Bunny</title>
         <description>The plot follows a day of the life of Big Buck Bunny when he meets three bullying rodents, Frank (the leader of the rodents), Rinky and Gimera. The rodents amuse themselves by harassing helpless creatures of the forest by throwing fruits, nuts and rocks at them.</description>
-        <rating>5/5</rating>
+        <rating>5</rating>
         <thumbnail>media/big_buck_bunny.jpg</thumbnail>
         <link>media/big_buck_bunny.mp4</link>
     </video>
     <video>
         <title>Some odd sample video</title>
         <description>Just words and music</description>
-        <rating>2/5</rating>
+        <rating>2</rating>
         <thumbnail>media/echo-hereweare.jpg</thumbnail>
         <link>media/echo-hereweare.mp4</link>
     </video>
