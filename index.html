@@ -7,12 +7,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="assets/style.css">
     <link rel="icon" href="assets/favicon.ico" type="image/x-icon">
-    <script type="text/javascript" src="xml-loader.js"></script>
+    <script type="text/javascript" src="movie-database.js"></script>
     <script type="text/javascript" src="video-player.js"></script>
     <script type="text/javascript" src="video-form.js"></script>
   </head>
 
-  <body onLoad="loader.loadMovieDatabase()">
+  <body onLoad="database.loadMovieDatabase()">
     <header>
       <div class="container">       
         <h1><img src="assets/logo.png" width="30em" /> Video Archive</h1>
@@ -83,7 +83,7 @@
   </body>
   <script>
       var player = new VideoPlayer(document.getElementById("player-overlay"));
-      var loader = new XmlLoader(document.getElementById("video-table"));     
+      var database = new MovieDatabase(document.getElementById("video-table"));     
       var addForm = new VideoForm(document.getElementById("form-overlay")); 
   </script>
 </html>

@@ -1,4 +1,4 @@
-class XmlLoader {
+class MovieDatabase {
     // Adapted from: https://www.w3schools.com/xml/xsl_client.asp
     // (like the xml snipped from the instructions ;-) )
     constructor(targetContainer) {

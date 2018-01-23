@@ -1,7 +1,8 @@
 class VideoForm {
-    constructor(formOverlay) {
-        this.overlay = formOverlay;
-        this.form = formOverlay.querySelector("#add-video")
+    constructor(formOverlay, database) {
+        this.overlay = formOverlay;        
+        this.form = formOverlay.querySelector("#add-video");
+        this.database = database;
     }
 
     getFormData( form ) {
