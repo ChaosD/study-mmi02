@@ -176,7 +176,7 @@ video {
     display: inline-block;
 }
 
-.video-overlay {
+.popup-overlay {
     position: fixed;
     visibility: hidden;
     opacity: 0;
@@ -188,7 +188,7 @@ video {
     transition: opacity 500ms;
 }
 
-.video-overlay.visible {
+.popup-overlay.visible {
     visibility: visible;
     opacity: 1;
 }
